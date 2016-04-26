@@ -4,38 +4,50 @@ body{
   background-size: cover;
   font-family: 'Ubuntu', sans-serif;
   color: white;
+  margin-left: 5%;
 }
 /*======================\\=============================*/
 
-.topLeft{
+.topLeft:before{
+  content: "";
   width:200px;
   height:200px;
+  position: fixed;
   background-image: url('images/aboutMe.jpg');
   border-radius: 200px 0 0 0;
   display: inline-block;
   background-size: contain;
   border: 5px solid black;
-
+  z-index: -1;
 }
 
-.topLeft:hover{
-  color:rgba(255, 225, 225, 1);
+.topLeft:hover:before{
   -webkit-filter: blur(5px);
    filter: blur(5px);
 }
 
+.topLeft:hover{
+  color: rgba(225, 225, 225, 1);
+  text-shadow: 2px 2px 2px black;
+}
+
+.topLeft h1{
+  padding: 10%;
+}
+
+.topLeft{
+  position: fixed;
+  left:5%;
+  right:0;
+  z-index: 0;
+  color: rgba(225, 0, 0, 0.0);
+}
+
 /*##############################################*/
 
-.about:hover{
-  display: inline-block;
-  color: rgba(255, 225, 225, 1);
-}
-
-.contact{
-  display: inline-block;
-}
-
-.topRight{
+.topRight:before{
+  content:"";
+  z-index: -1;
   width: 200px;
   height: 200px;
   background-color: blue;
@@ -46,29 +58,78 @@ body{
   border: 5px solid black;
 }
 
-.topRight:hover{
+.topRight:hover:before{
   -webkit-filter: blur(5px);
   filter: blur(5px);
 }
 
-.bottomLeft{
+.topRight h1{
+  margin-left:5%;
+  margin-top:-10%;
+  z-index: 0;
+  position: fixed;
+}
+
+.topRight:hover{
+  color: rgba(225,225,225,1);
+    text-shadow: 2px 2px 2px black;
+}
+
+.topRight{
+  position: fixed;
+  left:26%;
+  right:0;
+  z-index: 0;
+  color: rgba(225,225,225,0.0);
+  /*color: rgba(225, 0, 0, 0.0);*/
+}
+
+/*================================================*/
+
+.bottomLeft:before{
+  content:"";
+  z-index: -1;
   width: 200px;
-  height:200px;
-  background-color: yellow;
+  height: 200px;
+  background-color: blue;
   border-radius: 0 0 0 200px;
   display: inline-block;
   background-image: url('images/projects.jpg');
-  background-size: 100%;
+  background-size: contain;
   border: 5px solid black;
 }
 
-.bottomLeft:hover{
+.bottomLeft:hover:before{
   -webkit-filter: blur(5px);
   filter: blur(5px);
 }
 
+.bottomLeft h1{
+  margin-left:5%;
+  margin-top:-15%;
+  z-index: 0;
+  position: fixed;
+}
 
-.bottomRight{
+.bottomLeft:hover{
+  color: rgba(225,225,225,1);
+    text-shadow: 2px 2px 2px black;
+}
+
+.bottomLeft{
+  position: fixed;
+  left:5%;
+  right:0;
+  top:55%;
+  z-index: 0;
+  color: rgba(225,225,225,0.0);
+  /*color: rgba(225, 0, 0, 0.0);*/
+}
+
+/*========*/
+.bottomRight:before{
+  content:"";
+  z-index:-1;
   width: 200px;
   height: 200px;
   background-color: green;
@@ -79,15 +140,40 @@ body{
   border: 5px solid black;
 }
 
-.bottomRight:hover{
+.bottomRight:hover:before{
   -webkit-filter: blur(5px);
   filter: blur(5px);
 }
 
+.bottomRight h1{
+  margin-left:5%;
+  margin-top: -15%;
+  z-index: 0;
+  position: fixed;
+}
+
+.bottomRight:hover{
+  color: rgba(255, 225, 225, 1);
+  text-shadow: 2px 2px 2px black;
+}
+
+.bottomRight{
+  position: fixed;
+  left: 26%;
+  top: 55%;
+  z-index: 0;
+  color: rgba(225,225,225,0.0);
+}
+
+/*======*/
 
 .top{
-  display: block;
+  display: inline-block;
+  position: fixed;
+  margin-left: 25%;
 }
 .bottom{
-  display: block;
+  display: inline-block;
+  position: fixed;
+  margin-left: 25%;
 }
