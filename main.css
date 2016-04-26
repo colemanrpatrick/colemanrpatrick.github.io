@@ -1,0 +1,93 @@
+body{
+  background-color: #1B1B1B;
+  background-image: url('images/stockSky.jpg');
+  background-size: cover;
+  font-family: 'Ubuntu', sans-serif;
+  color: white;
+}
+/*======================\\=============================*/
+
+.topLeft{
+  width:200px;
+  height:200px;
+  background-image: url('images/aboutMe.jpg');
+  border-radius: 200px 0 0 0;
+  display: inline-block;
+  background-size: contain;
+  border: 5px solid black;
+
+}
+
+.topLeft:hover{
+  color:rgba(255, 225, 225, 1);
+  -webkit-filter: blur(5px);
+   filter: blur(5px);
+}
+
+/*##############################################*/
+
+.about:hover{
+  display: inline-block;
+  color: rgba(255, 225, 225, 1);
+}
+
+.contact{
+  display: inline-block;
+}
+
+.topRight{
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+  border-radius: 0 200px 0 0px;
+  display: inline-block;
+  background-image: url('images/contact.jpg');
+  background-size: contain;
+  border: 5px solid black;
+}
+
+.topRight:hover{
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+}
+
+.bottomLeft{
+  width: 200px;
+  height:200px;
+  background-color: yellow;
+  border-radius: 0 0 0 200px;
+  display: inline-block;
+  background-image: url('images/projects.jpg');
+  background-size: 100%;
+  border: 5px solid black;
+}
+
+.bottomLeft:hover{
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+}
+
+
+.bottomRight{
+  width: 200px;
+  height: 200px;
+  background-color: green;
+  border-radius: 0 0 200px 0;
+  background-image: url('images/resume.jpg');
+  display: inline-block;
+  background-size: 100%;
+  border: 5px solid black;
+}
+
+.bottomRight:hover{
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+}
+
+
+.top{
+  display: block;
+}
+.bottom{
+  display: block;
+}
