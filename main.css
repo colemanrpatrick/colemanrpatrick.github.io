@@ -5,6 +5,8 @@ body{
   font-family: "ubuntu";
   color:white;
   background-image: url("images/gradient.jpg");
+  background-color: black;
+  background-repeat: no-repeat;
 }
 
 .homeView{
