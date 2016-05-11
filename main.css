@@ -1,179 +1,190 @@
 body{
-  background-color: #1B1B1B;
-  background-image: url('images/stockSky.jpg');
-  background-size: cover;
-  font-family: 'Ubuntu', sans-serif;
-  color: white;
-  margin-left: 5%;
-}
-/*======================\\=============================*/
-
-.topLeft:before{
-  content: "";
-  width:200px;
-  height:200px;
-  position: fixed;
-  background-image: url('images/aboutMe.jpg');
-  border-radius: 200px 0 0 0;
-  display: inline-block;
-  background-size: contain;
-  border: 5px solid black;
-  z-index: -1;
-}
-
-.topLeft:hover:before{
-  -webkit-filter: blur(5px);
-   filter: blur(5px);
-}
-
-.topLeft:hover{
-  color: rgba(225, 225, 225, 1);
-  text-shadow: 2px 2px 2px black;
-}
-
-.topLeft h1{
-  padding: 10%;
-}
-
-.topLeft{
-  position: fixed;
-  left:5%;
-  right:0;
-  z-index: 0;
-  color: rgba(225, 0, 0, 0.0);
-}
-
-/*##############################################*/
-
-.topRight:before{
-  content:"";
-  z-index: -1;
-  width: 200px;
-  height: 200px;
-  background-color: blue;
-  border-radius: 0 200px 0 0px;
-  display: inline-block;
-  background-image: url('images/contact.jpg');
-  background-size: contain;
-  border: 5px solid black;
-}
-
-.topRight:hover:before{
-  -webkit-filter: blur(5px);
-  filter: blur(5px);
-}
-
-.topRight h1{
-  margin-left:5%;
-  margin-top:-10%;
-  z-index: 0;
-  position: fixed;
-}
-
-.topRight:hover{
-  color: rgba(225,225,225,1);
-    text-shadow: 2px 2px 2px black;
-}
-
-.topRight{
-  position: fixed;
-  left:26%;
-  right:0;
-  z-index: 0;
-  color: rgba(225,225,225,0.0);
-  /*color: rgba(225, 0, 0, 0.0);*/
-}
-
-/*================================================*/
-
-.bottomLeft:before{
-  content:"";
-  z-index: -1;
-  width: 200px;
-  height: 200px;
-  background-color: blue;
-  border-radius: 0 0 0 200px;
-  display: inline-block;
-  background-image: url('images/projects.jpg');
-  background-size: contain;
-  border: 5px solid black;
-}
-
-.bottomLeft:hover:before{
-  -webkit-filter: blur(5px);
-  filter: blur(5px);
-}
-
-.bottomLeft h1{
-  margin-left:5%;
-  margin-top:-15%;
-  z-index: 0;
-  position: fixed;
-}
-
-.bottomLeft:hover{
-  color: rgba(225,225,225,1);
-    text-shadow: 2px 2px 2px black;
-}
-
-.bottomLeft{
-  position: fixed;
-  left:5%;
-  right:0;
-  top:55%;
-  z-index: 0;
-  color: rgba(225,225,225,0.0);
-  /*color: rgba(225, 0, 0, 0.0);*/
-}
-
-/*========*/
-.bottomRight:before{
-  content:"";
-  z-index:-1;
-  width: 200px;
-  height: 200px;
-  background-color: green;
-  border-radius: 0 0 200px 0;
-  background-image: url('images/resume.jpg');
-  display: inline-block;
+  /*background-image: url("images/background0.jpg");*/
   background-size: 100%;
-  border: 5px solid black;
+  margin-left: 18%;
+  font-family: "ubuntu";
+  color:white;
+  background-image: url("images/gradient.jpg");
 }
 
-.bottomRight:hover:before{
-  -webkit-filter: blur(5px);
-  filter: blur(5px);
+.homeView{
+  width: 80%;
+  height: 700px;
+  padding-left: 1%;
 }
 
-.bottomRight h1{
-  margin-left:5%;
-  margin-top: -15%;
-  z-index: 0;
-  position: fixed;
+body::after{
+  content:'';
+  display:block;
+  left:0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  background-size: 50%;
+  background-image:url("images/hexa.png");
+  background-repeat: repeat;
+  position:absolute;
+  z-index: -1;
 }
 
-.bottomRight:hover{
-  color: rgba(255, 225, 225, 1);
-  text-shadow: 2px 2px 2px black;
+.homeView header{
+  position: relative;
+  width: 92%;
+  top: 0px;
+  height: 50px;
+  background-color: rgba(255, 225, 225, 0.3);
+  color:rgba(255, 225, 225, 0.3);
+  text-shadow: 1px 2px 0px white;
+  padding: 1%;
+  margin-left: 1%;
 }
 
-.bottomRight{
-  position: fixed;
-  left: 26%;
-  top: 55%;
-  z-index: 0;
-  color: rgba(225,225,225,0.0);
-}
-
-/*======*/
-
-.top{
+.banner{
+  width: 75%;
+  height: 75px;
   display: inline-block;
-  position: fixed;
-  margin-left: 25%;
+  padding: 0px;
 }
-.bottom{
+.banner img{
+  height:50px;
+  width: 50px;
   display: inline-block;
-  position: fixed;
-  margin-left: 25%;
+  margin: 0px;
+  position: relative;
+  top:15px;
 }
+.banner p{
+  display: inline-block;
+  font-size: 30px;
+  margin: 0px;
+}
+.p2 {
+  position: relative;
+  font-size:15px;
+}
+
+.midViewHome{
+  margin-top: 10px;
+  width: 100%;
+  height: 300px;
+}
+
+.midLeftHome{
+  display: inline-block;
+  width: 30%;
+  height:100%;
+  border: 2px double white;
+  background-image: url("images/me.jpg");
+  background-size: 100%;
+  background-position: 50%;
+  float: left;
+  margin-left:1%;
+}
+.midLeftHome::after{
+  content:'';
+  display:block;
+  left:0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+  background-image:url("images/static.gif");
+}
+
+
+.midRightHome{
+  display: inline-block;
+  width: 60%;
+  height: 94%;
+  background-color: black;
+  color: white;
+  float:left;
+  padding:10px;
+  font-family:'Syncopate', sans-serif;
+  margin-left:1%;
+}
+.midRightHome p{
+  margin-top:0px;
+}
+
+i{
+  color:white;
+}
+
+.homeFootCont{
+  width: 100%;
+  height: 340px;
+  margin-top: 10px;
+}
+
+.nav{
+  display: inline-block;
+  width: 30%;
+  height: 75%;
+  background-size: 100%;
+  margin-left: 1%;
+  border: 2px solid white;
+  color: rgba(0, 0, 0, 0.0);
+  position: relative;
+}
+
+.resume{
+  background-image: url('images/resume.jpg');
+}
+
+.about{
+  background-image: url('images/aboutMe.jpg');
+}
+
+.projects{
+  background-image: url('images/projects.jpg');
+}
+
+.nav:hover:after{
+  content:'';
+  display:block;
+  left:0;
+  top:0px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  background-color:black;
+  z-index: 1;
+  color: rgba(225, 225, 225, 1);
+}
+
+.nav p{
+  z-index:2;
+  position: absolute;
+  top:20px;
+  font-size: 40px;
+  top: 60px;
+  left:5px;
+}
+
+.nav:hover{
+  color:white;
+}
+
+/*
+.aboutMe{
+  display: inline-block;
+  width: 30%;
+  height: 75%;
+  background-image: url('images/aboutMe.jpg');
+  background-size: 100%;
+  margin-left: 1%;
+  border: 2px solid white;
+  color:
+}
+.projects{
+  display: inline-block;
+  width: 30%;
+  height: 75%;
+  background-image: url('images/projects.jpg');
+  background-size: 100%;
+  margin-left: 1%;
+  border: 2px solid white;
+}*/
