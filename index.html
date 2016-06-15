@@ -9,44 +9,61 @@
     <title>PATRICK COLEMAN</title>
   </head>
   <body>
-    <section class='homeView'>
     <header>
       <div class="banner">
         <img src="images/frontLogo.png"/>
           <p>PATRICK R. COLEMAN</p>
           <span class='p2'>FRONT END WEB ENGINEER</span>
+          <span class='back hide'><i class="fa fa-arrow-left" aria-hidden="true"></i>Back</span>
       </div>
     </header>
+    <section class='homeView'>
     <section class="midViewHome">
       <div class="midLeftHome">
       </div>
-      <div class="midRightHome">
+      <div class="midRightHome hide">
         <P>>PATRICK COLEMAN PORTFOLIO v.1.0.0</p>
         <P>>LinkedIn PROFILE <i class="fa fa-linkedin-square" aria-hidden="true"></i></p>
-        <P>>colemanrpatrick <i class="fa fa-github" aria-hidden="true"></i></P>
+        <P>><a href="https://github.com/colemanrpatrick">colemanrpatrick</a> <i class="fa fa-github" aria-hidden="true"></i></P>
         <P>>619-549-8770 <i class="fa fa-phone-square" aria-hidden="true"></i></p>
-        <p>>colemanrpatrick@gmail.com <i class="fa fa-google" aria-hidden="true"></i><p>
+        <p>><a href="mailto:colemanrpatrick@gmail.com"/>colemanrpatrick@gmail.com</a> <i class="fa fa-google" aria-hidden="true"></i><p>
         <P>>MAIN PORTFOLIO ...READY_</P>
       </div>
     </section>
+
+    <section class="aboutMe hide">
+      about me
+    </section>
+
+    <section class="resumePage hide">
+      resume
+      <iframe src="https://docs.google.com/document/d/1AwmA3_amxNzIdJcZCXAHFZTdpzBI82SHuyDQOMRWU2U/pub?embedded=true" frameborder="0"></iframe>
+    </section>
+
+    <section class="projectsPage hide">
+      projects
+    </section>
+
     <footer>
       <section class="homeFootCont">
 
-        <div class="nav resume">
+        <div id='resume' class="nav resume">
           <p>RESUME</p>
         </div>
 
-        <div class="nav about">
+        <div id='about' class="nav about">
           <p>ABOUT ME</p>
         </div>
 
-        <div class="nav projects">
+        <div id='projects' class="nav projects">
           <p>PROJECTS</p>
         </div>
 
       </section>
     </footer>
   </section>
+
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+      <script src="main.js" charset="utf-8"></script>
   </body>
 </html>
