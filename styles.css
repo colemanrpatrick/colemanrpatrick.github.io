@@ -213,6 +213,9 @@ body {
   vertical-align: middle;
   text-align: center;
 }
+.mywork-top img{
+  width: 12em;
+}
 .mywork-top .right{
   display: table-cell;
   vertical-align: middle;
@@ -352,5 +355,36 @@ body {
     display: block;
     width: 28em;
     margin: 0 auto;
+  }
+  #goals {
+    display: block;
+  }
+  #goals li {
+      display: block;
+      width: 28em;
+      padding: 2em;
+      margin: 0 auto;
+  }
+  .contact li span {
+    display: block;
+  }
+}
+/*=======================*/
+@media(max-width:520px){
+  .masthead::before {
+    height: 50em;
+  }
+}
+/*=======================*/
+@media(max-width:400px){
+  .mywork-top .left {
+    display: block;
+  }
+  .mywork-top .right {
+    display: block;
+    width: 100%;
+  }
+  .mywork-top {
+    display: block;
   }
 }
