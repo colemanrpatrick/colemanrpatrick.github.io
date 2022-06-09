@@ -472,6 +472,11 @@ p{
   .employers .logo {
     width: 100%;
   }
+  .resume iframe {
+    width: 100%;
+    border: none;
+    height: 800px;
+  }
 }
 @media(max-width:600px){
   .main-nav {
