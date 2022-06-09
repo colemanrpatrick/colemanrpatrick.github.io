@@ -58,6 +58,7 @@ function tabToggle(number,element){
     el[i].className = element;
   }
   el[elIndex-1].className += ' active';
+  return false;
 }
 //==== toggle explained ===//
 // function testPoly(objectIn, elementName) {

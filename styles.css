@@ -1,3 +1,7 @@
+.main-nav span:not(.material-icons) {
+    font-size: 2em;
+    text-transform: uppercase;
+}
 *, *:before, *:after {
   margin: 0;
   padding: 0;
@@ -14,20 +18,11 @@
   line-height: 0;
   visibility: hidden;
 }
-*:not(.material-icons) {
-  font-family: "roboto mono", sans-serif;
-  font-weight: 100;
-}
-@font-face {
-    font-family: 'besom_2regular';
-    src: url('fonts/besom-handwritten-brush-font-webfont.woff2') format('woff2'),
-         url('fonts/besom-handwritten-brush-font-webfont.woff') format('woff'),
-         url('fonts/Besom-Handwritten-Brush-Font.ttf') format('ttf');
-    font-weight: normal;
-    font-style: normal;
-}
 a {
   text-decoration: none !important;
+}
+b{
+  font-weight: bold;
 }
 li, ul {
   list-style-type: none !important;
@@ -66,325 +61,450 @@ body {
     font-size: 18px;
   }
 }
-@media(max-width:1200px) {
+@media(max-width:640px) {
   body {
-    font-size: 16px;
-  }
-}
-@media(max-width:1085px) {
-  body {
-    font-size: 15px;
-  }
-}
-@media(max-width:800px) {
-  body {
-    font-size: 13px;
+    font-size: 14px;
   }
 }
 @media(max-width:500px) {
   body {
-    font-size: 12px;
+    font-size: 13px;
   }
 }
 @media(max-width:400px) {
   body {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
-.masthead {
-    display: table;
+h1, h2, h3, h4, h5, header, button{
+  font-family: 'VT323', monospace;
+}
+p, a, b{
+  font-family: 'Oswald', sans-serif;
+}
+p{
+  font-size: 1em;
+}
+@media(max-width:1440px) {
+  p{
+    font-size: 1em;
+  }
+}
+@media(max-width:600px){
+  p {
+    font-size: 1.25em;
+  }
+}
+/* wrapper */
+.wrapper {
+  width: 100%;
+  background-color: #333;
+  border-top: 0.5em solid #333;
+}
+.main-nav {
+    width: 6em;
+    border-left: 1px solid rgba(0,0,0,0.25);
+    text-align: center;
+    position: fixed;
+    display: block;
+    right: 0;
+    top: 0;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    background-color: rgba(0,0,0,0.5);
+    height: 100%;
+    z-index: 999;
+}
+.main-content {
+  text-align: center;
+  border-top: 0.5em solid #333;
+}
+.main-nav ul {
+  width: 100%;
+  display: block;
+}
+.main-nav ul li{
+  display: block;
+  width: 100%;
+  padding: 1em 0em 1em 0em;
+}
+.main-nav ul li b{
+  color: #e4fde1;
+  text-shadow: 0em 0em 1em;
+  opacity: 0.25;
+}
+.main-anchor{
+    display: block;
     width: 100%;
     text-align: center;
-    padding: 9em 4em 5em 4em;
-    background-color: #182935ab;
-}
-.masthead::before {
-    content: " ";
-    left: 0;
-    top: 0;
-    position: fixed;
-    z-index: -1;
-    width: 100%;
-    height: 40em;
-    background-image: url("images/david-martin-p9vBVq_-nXY-unsplash.jpg");
-    background-size: cover;
-    background-position: center;
-}
-.header-img img{
-    display: inline-block;
-    vertical-align: middle;
-    width: 16em;
-    border-radius: 50%;
-    border: 0.25em solid white;
-}
-
-.title {
-    vertical-align: middle;
-    padding-bottom: 1em;
-    display: inline-block;
-}
-.title h1 {
-    color: white;
-    text-shadow: 0em 0em 0.25em black;
-    font-size: 3em;
-    border-bottom: 0.05em solid white;
-    margin-bottom: 0.25em;
-}
-.title h2 {
-    color: white;
-    font-size: 1.5em;
-    text-shadow: 0em 0em 1em black;
-}
-#nav {
-    width: 100%;
-    display: table;
-    background-color: #4b4b4b;
-    position: fixed;
-    z-index: 999;
-    top: 0;
-    left: 0;
-}
-#nav a {
-    font-size: 1em;
-    border: none;
+    text-transform: capitalize;
+    font-size: 0.75em;
+    color: #e4fde1;
+    text-shadow: 0em 0em 1em;
+    transition: 0.3s;
     background: none;
-    padding: 1em;
-    color: white;
+    border: none;
+}
+.main-anchor:hover,
+.main-anchor.active{
+  color: #F45B69;
+}
+.main-nav ul li .material-icons {
+    font-size: 2em;
+    display: block;
+}
+/* content blocks */
+.top-hero {
+    width: 100%;
     display: block;
     text-align: center;
-    border-bottom: 0.25em solid #ffffff7a;
-}
-#nav li {
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-    transition: 2s;
-}
-
-
-.nav li:first-child {
-    background-color: #1c587b;
-}
-.nav li:nth-child(2) {
-    background-color: #1c587b;
-}
-.nav li:nth-child(3) {
-    background-color: #1c587b;
-}
-.nav li:nth-child(4) {
-    background-color: #1c587b;
-}
-.nav.load li:nth-child(2) {
-    background-color: #2079ac;
-}
-.nav.load li:nth-child(3) {
-    background-color: #178acc;
-}
-.nav.load li:nth-child(4) {
-    background-color: #0d95e3;
-}
-
-
-#nav li a:hover{
-  border-bottom: 0.25em solid gold;
-}
-#main {
-    background-color: #fdf6e9;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     position: relative;
 }
-.page{
-  padding-top: 2.75em;
+.hero {
+    width: 100%;
+    display: block;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    padding: 5em 0em 5em 0em;
 }
-/*=================*/
-.page h4 {
-  font-size: 4em;
-  color: #876944;
-  margin: 0 auto;
-  text-align: center;
+#intoduction {
+    background-image: url("images/lucas-kapla-wQLAGv4_OYs-unsplash.jpg");
 }
-.mywork-top {
-	display: table;
-	padding: 1em 1em;
-	text-align: center;
-	width: 100%;
+#intoduction img {
+    width: 10em;
+    border-radius: 50%;
 }
-.mywork-top .left{
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
+.top-hero-content {
+    padding: 18em 0em;
+    overflow: hidden;
+    position: relative;
 }
-.mywork-top img{
-  width: 12em;
+.hero-content {
+    width: 100%;
+    text-align: center;
+    padding: 1em;
+    max-width: 1300px;
+    margin-right: 6em;
+    margin-left: auto;
 }
-.mywork-top .right{
-  display: table-cell;
-  vertical-align: middle;
-  width: 75%;
-  text-align: center;
+.top-hero-content section,
+.top-hero-content video{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
 }
-#example-sites{
+.top-hero-content section{
+  z-index: 2;
+}
+.top-hero-content video{
+  z-index: 1;
+  width: 100%;
+  opacity: 0.9;
+}
+.top-hero-content h1 {
+    text-transform: capitalize;
+    font-size: 4em;
+    color: #e4fde1;
+    text-shadow: 0.05em 0.05em #ff00008a, -0.05em -0.05em #0098ffad;
+}
+.top-hero-content h2{
+  color:#e4fde1;
+  text-transform: capitalize;
+}
+.content-block{
   width: 100%;
   text-align: center;
 }
-#example-sites li {
+.content-block.white section{
+      text-align: center;
+      display: block;
+      margin-right: 6em;
+      width: 100%;
+      margin-left: auto;
+      background: #456990;
+}
+.content-block.white section p {
+    max-width: 1000px;
+    color: #E4FDE1;
+    margin: 0 auto;
+    text-align: justify;
+    padding: 4em;
+    line-height: 2.5em;
+}
+.content-block.red,
+.content-block.white{
+  background-image: url("images/grid.png");
+  background-size: 1em;
+}
+.content-block.red {
+    background-color: #F45B69;
+    padding: 3em;
+    border-bottom: 0.25em solid #e4fde1;
+}
+.content-block.red *{
+  color: #E4FDE1;
+}
+.content-block header {
+    font-size: 3em;
+    text-transform: uppercase;
+    display: inline-block;
+    vertical-align: middle;
+}
+.content-block img{
   display: inline-block;
-  width: 45%;
-  vertical-align: top;
+  vertical-align: middle;
+}
+@media(max-width:1060px){
+  .top-hero-content video{
+    width: auto;
+    height: 100%;
+  }
+}
+#list-section {
+  background-image: url("images/pawel-nolbert-4u2U8EO9OzY-unsplash.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+#list-section ul {
+  padding: 10em;
+  background: #00000080;
+}
+#list-section li {
+  color: #e4fde1;
+  max-width: 900px;
+  background-color: #131d35e6;
+  margin: 3em auto;
+  padding: 3em;
+}
+#list-section li h4 span:not(.material-icons) {
+    font-family: 'VT323', monospace;
+    font-size: 3em;
+    text-shadow: 0em 0em 0.2em #87ceebad;
+    line-height: 1em;
+}
+#list-section span.material-icons {
+    font-size: 2em;
+    text-shadow: 0em 0em 0.2em #87ceebad;
+}
+#list-section li p {
+  line-height: 2em;
+  font-weight: lighter;
+  font-size: 1.25em;
+  text-align: justify;
+}
+.content-block.previous-works{
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url("images/lucas-kapla-wQLAGv4_OYs-unsplash.jpg");
+}
+.employers, .projects {
+  padding: 6em 6em 6em 2em;
   text-align: center;
 }
-#example-sites li a {
-    display: block;
-    width: 100%;
-    padding: 1em;
+.employers{
+  background: rgba(0,0,0,0.75);
 }
-.website-img {
-    width: 100%;
-    height: 20em;
-    overflow: hidden;
-    position: relative;
-    margin: 1em auto;
-    display: block;
-    border: 0.2em solid #1c587b;
+.projects {
+  background-color: #114B;
 }
-.website-img img {
-    position: absolute;
-    left: 50%;
-    top: 0;
-    transform: translateX(-50%) scale(1);
-    width: 100%;
-    transition: 0.3s;
+.employers ul{
+  width: 100%;
+  max-width: 900px;
+  display: table;
+  margin: 0 auto;
 }
-.website-img:hover img {
-	transform: translateX(-50%) scale(1.1);
+.employers li{
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  color: white;
 }
-#example-sites h2 {
-    font-size: 1.33em;
-    font-weight: bold;
-    text-transform: capitalize;
+.employers .logo{
+  width: 33%;
+  padding: 2em;
 }
-#example-sites h2 span {
-    font-size: 0.75em;
-    color: grey;
-    display: block;
+.logo img{
+  max-width: 10em;
 }
-/*=============*/
-.paragraph{
-    font-family: sans-serif;
-    font-size: 1.2em;
-    line-height: 2.25em;
-    text-align: justify;
-    padding: 3em;
+.employers li h3{
+ font-size: 3em;
+ text-shadow: 0em 0em 0.25em skyblue;
 }
-.paragraph span{
-  font-size: 2em;
-  display: inline-block;
-  color: darkred;
-  text-transform: uppercase;
-  vertical-align: top;
-  font-weight: bold;
+.employers li{
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  color: #E4FDE1;
+  width: 50%;
 }
-.paragraph b{
-  font-weight: bold;
-  font-family: inherit;
+.employers li p,
+.employers li b{
+  text-shadow: 0em 0em 0.2em black;
+  line-height: 2em;
 }
-/*==========*/
-#goals {
-    display: table;
+.employers li p{
+  font-weight: lighter;
 }
-#goals li {
+.projects ul{
+  width: 100%;
+  max-width: 900px;
+  display: table;
+  margin: 0 auto;
+}
+.projects li {
     display: table-cell;
     text-align: center;
-    width: 33.3%;
+    vertical-align: top;
+    color: #E4FDE1;
+    width: 50%;
     padding: 2em;
 }
-#goals h5 {
-    font-size: 1.5em;
-    font-weight: bold;
+.projects img {
+    box-shadow: 0em 0em 1em white;
+    transition: 0.3s;
 }
-#goals .material-icons {
-    font-size: 4em;
-    color: #1c587b;
+.projects img:hover{
+  transform: scale(1.1);
 }
-#goals p {
-    font-family: sans-serif;
-    font-size: 1.2em;
-    line-height: 1.5em;
-    margin-top: 1em;
-    text-align: justify;
-}
-#goals p span{
+.projects h3 {
   font-size: 2em;
-  display: inline-block;
-  color: darkred;
+  color: #E4FDE1;
+  margin-top: 1em;
+  text-shadow: 0em 0em 0.25em black;
   text-transform: uppercase;
-  vertical-align: top;
-  font-weight: bold;
 }
-#goals p b{
-  font-weight: bold;
-  font-family: inherit;
+.projects span {
+  color: #E4FDE1;
+  font-size: 1.25em;
 }
-/*=======================*/
-.contact ul {
+.projects p {
+  text-align: justify;
+  line-height: 2em;
+}
+.content-block.resume {
+  padding-right: 6em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  padding-left: 2em;
+}
+.resume iframe {
+  width: 100%;
+  border: none;
+  height: 1200px;
+}
+.content-block.contact{
+  background-image: url("images/andrea-de-santis-i2BcaGXomv0-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.content-block.contact ul {
+    width: 100%;
     text-align: center;
-    background-color: #333;
-    padding: 2em;
-}
-.contact li {
-    padding: 1em;
-}
-.contact li span {
-    color: white;
-    font-size: 2em;
-}
-.contact a {
-    color: wheat;
-    font-size: 2em;
-}
-/*=======================*/
-@media(max-width:870px){
-  .website-img{
-    height: 14em;
-  }
-}
-@media(max-width:650px){
-  .paragraph {
-    padding: 1em;
-  }
-  #example-sites li {
-    display: block;
-    width: 28em;
     margin: 0 auto;
+    padding: 8em 0em;
+    background-color: rgba(0,0,0,0.7);
+}
+.content-block.contact ul li{
+  width: 100%;
+  display: block;
+  text-align: center;
+  padding: 1em;
+}
+.content-block.contact .material-icons,
+.content-block.contact a{
+  display: inline-block;
+  vertical-align: middle;
+  text-shadow: 0em 0em 0.5em skyblue;
+  color: #E4FDE1;
+}
+.content-block.contact ul li:hover a,
+.content-block.contact ul li:hover .material-icons{
+  color: white;
+  text-shadow: 0em 0em 0.5em gold;
+}
+.content-block.contact .material-icons{
+  font-size: 1em;
+}
+.content-block.contact a{
+  font-size: 2.5em;
+}
+@media(max-width:1440px){
+  .content-block.white section p {
+    padding: 3em 8em;
   }
-  #goals {
-    display: block;
+  .projects img {
+    width: 20em;
   }
-  #goals li {
+}
+@media(max-width: 1050px){
+  .projects li {
       display: block;
-      width: 28em;
-      padding: 2em;
-      margin: 0 auto;
-  }
-  .contact li span {
-    display: block;
+      width: 100%;
+      padding: 0em;
+      max-width: 500px;
+      margin: 4em auto;
   }
 }
-/*=======================*/
-@media(max-width:520px){
-  .masthead::before {
-    height: 50em;
+@media(max-width:800px){
+  #list-section ul {
+    padding: 8em;
   }
-}
-/*=======================*/
-@media(max-width:400px){
-  .mywork-top .left {
+  .projects ul,
+  .employers ul{
     display: block;
   }
-  .mywork-top .right {
+  .projects li, .employers li {
+    max-width: 300px;
     display: block;
+    margin: 2em auto;
+    padding: 0;
     width: 100%;
   }
-  .mywork-top {
-    display: block;
+  .employers .logo {
+    width: 100%;
+  }
+}
+@media(max-width:600px){
+  .main-nav {
+    width: 100%;
+    border-left: none;
+    top: auto;
+    background-color: rgba(0,0,0,0.9);
+    height: auto;
+    padding: 0.5em;
+    bottom: 0;
+  }
+  .main-nav ul {
+    padding: 1em 0em;
+  }
+  .main-nav ul li{
+    display: inline-block;
+    vertical-align: middle;
+    width: 23%;
+  }
+  li.spacer-li {
+      display: none !important;
+  }
+  .employers, .projects {
+      padding: 4em;
+      text-align: center;
+  }
+  #list-section ul {
+    padding: 3em;
+  }
+  .content-block.white section p {
+    padding: 3em 3em;
+  }
+  .content-block.contact ul {
+    padding: 10em 0em 18em 0em;
   }
 }

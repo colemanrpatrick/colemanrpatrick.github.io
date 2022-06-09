@@ -2,122 +2,208 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>patrick coleman</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet"> -->
-
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>P a t r i c k _ C o l e m a n</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="user-scalable = yes, width=320, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&family=VT323&display=swap" rel="stylesheet">
   </head>
-  <body>
-    <div id="masthead" class="masthead">
-      <div class="header-img">
-        <img src="images/IMG_1469.png" alt="">
-      </div>
-      <div class="title">
-        <h1>patrick r. coleman</h1>
-        <h2>front end web development and design</h2>
-        <!-- <h3>I combine skills with design and code to create websites that improve user experience</h3> -->
-      </div>
-    </div>
-    <ul id="nav" class="nav">
-      <li> <a href="#mywork" type="button" name="button">my work</a> </li>
-      <li> <a href="#aboutme" type="button" name="button">about me</a> </li>
-      <li> <a href="#contact" type="button" name="button">contact</a> </li>
-    </ul>
-    <div id="main">
-      <div class="page" id="mywork">
-        <h4>my work
-         </h4>
-        <div class="mywork-top">
-          <div class="left">
-            <img src="images/LogoSingle.png" alt="">
-          </div>
-          <div class="right">
-            <p class="paragraph"><span>F</span>rom 2016, to 2020 I worked with <b>Hawaii Discount</b>. During my time with them. I <b>designed</b> and <b>coded</b> microsites. Each site was required to look <b>unique</b> even if some design requirements were to be similar to other sites. Below are some <b>examples</b> of some of the sites I made:</p>
+  <body onload="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;">
+    <!-- Masthead/menu -->
+    <div class="wrapper">
+      <!-- ====== -->
+      <nav class="main-nav">
+        <ul>
+          <li>
+            <button type="button" class="main-anchor active" onclick="scrollIn('#about-me-section');tabToggle(1,'main-anchor')">
+              <span class="material-icons">emoji_people</span>
+              <span>about me</span>
+            </button>
+          </li>
+          <li class="spacer-li"><b>|</b></li>
+          <li>
+            <button type="button" class="main-anchor" onclick="scrollIn('#previous-works-section');tabToggle(2,'main-anchor')">
+              <span class="material-icons">view_list</span>
+              <span>previous work</span>
+            </button>
+          </li>
+          <li class="spacer-li"><b>|</b></li>
+          <li>
+            <button type="button" class="main-anchor"  onclick="scrollIn('#resume-section');tabToggle(3,'main-anchor')">
+              <span class="material-icons">content_paste</span>
+              <span>resume</span>
+            </button>
+          </li>
+          <li class="spacer-li"><b>|</b></li>
+          <li>
+            <button type="button" class="main-anchor" onclick="scrollIn('#contact-section');tabToggle(4,'main-anchor')">
+              <span class="material-icons">mail</span>
+              <span>contact me</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+      <!-- ==== -->
+      <div class="main-content">
+        <!-- About -->
+        <div class="top-hero" id="intoduction">
+          <div class="top-hero-content">
+            <div id="video-1"></div>
+            <section>
+              <img src="images/profile-img.jpg" alt="patrick_coleman_web_designer">
+              <h1>Patrick R. Coleman</h1>
+              <h2><span>front end web development, design & user experience</span></h2>
+            </section>
           </div>
         </div>
-        <ul id="example-sites">
-          <li>
-            <a href="https://www.grandcircleislandtouroahu.com/" target="_blank">
-              <div class="website-img">
-                <img src="images/grandcircleislandtour.png" alt="">
-              </div>
-              <h2>grand circle island tour oaha<span>2016</span></h2>
-            </a>
-          </li>
-          <li>
-            <a href="http://www.sharkcagetours.com/" target="_blank">
-              <div class="website-img">
-                <img src="images/sharkcagetours.png" alt="">
-              </div>
-              <h2>shark cage tours <span>2018</span></h2>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.hawaiiluaus.com/" target="_blank">
-              <div class="website-img">
-                <img src="images/hawaiiluaus.png" alt="">
-              </div>
-              <h2>hawaii luaus <span>2019</span></h2>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.helicoptertoursdiscount.com/" target="_blank">
-              <div class="website-img">
-                <img src="images/hawaiihelicoptertour.png" alt="">
-              </div>
-              <h2>hawaii luaus <span>2020</span></h2>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="page" id="aboutme">
-        <header>
-          <h4>about me</h4>
-        </header>
-        <p class="paragraph"><span>i</span>n 2015 I moved from California to South Carolina to enroll in the <b>Iron Yard</b>; a <b>code bootcamp</b> where I learned the fundamentals of <b>front end web development</b>, as well as <b>"learning how to learn"</b>. I chose front end web development because it suited my <b>creativity</b> better than the more technical backend web development. In fact, my <b>focus on design</b> as well as <b>code</b> is what I take the most pride in, and lead me to my first employment opportunities. My focus when creating for the web, is to approach a site with <b>three main goals</b></p>
-        <ul id="goals">
-          <li>
-             <span class="material-icons">palette</span>
-             <h5>design</h5>
-             <p><span>u</span>sing industy leading tools, the design must stand out while also provide a <b>seemless user experience</b></p>
-          </li>
-          <li>
-            <span class="material-icons">laptop</span>
-            <h5>build</h5>
-            <p><span>c</span>ombining CSS, Javascript, and the advandages of HTML5, sites are built <b>cross browser compliant</b>, and <b>seo friendly</b></p>
-          </li>
-          <li>
-            <span class="material-icons">phone_iphone</span>
-            <h5>responsive</h5>
-            <p><span>U</span>sing a <b>mobile first focus</b> allows websites to work with any viewport. My designs focus on reaching as many devices as possible.</p>
-          </li>
-        </ul>
-        <p class="paragraph"><span>I</span>'m always learning new things to add to my skill sets; whether it be new design focuses like improved typography and use of space, or getting to know new technical tools like REACT. As of 2021, I'm <b>open for work.</b></p>
-      </div>
-      <div class="page" id="contact">
-        <section>
-          <article class="contact">
-            <h4>contact</h4>
+        <div class="content-block red">
+          <img src="images/glyph.png" alt="" style="width:3em">
+          <header id="about-me-section">
+            01 about me
+          </header>
+        </div>
+        <div class="content-block white">
+          <section>
+            <p><b>I</b>n 2015 I moved from California to South Carolina to enroll in the Iron Yard; a <b>code bootcamp</b> where I learned the fundamentals of <b>front end web development</b>, as well as <b>"learning how to learn"</b>. I chose front end web development because it suited my creativity better than the more technical backend web development. In fact, my <b>focus on design</b> as well as code is what I take the most pride in, and lead me to my first employment opportunities. My focus when creating for the web, is to approach a site by focusing on <b>3 major factors</b></p>
+          </section>
+          <div id="list-section">
             <ul>
               <li>
-                <span>email</span>
-                <a href="mailto:colemanrpatrick@gmail.com">colemanrpatrick@gmail.com</a>
+                <h4><span class="material-icons">square_foot</span><span>Design</span></h4>
+                <p>Does the website standout? I find it paramount to avoid boring web experiences, so finding the right deisgn is crucial for keeping the experience engaging.</p>
               </li>
               <li>
-                <span>social</span>
-                <a href="https://www.linkedin.com/in/patrick-coleman-678794120/">Linkedin</a>
+                <h4><span class="material-icons">code</span><span>Build</span></h4>
+                <p>Is the website responsive and its it supported by the widest variety of browsers? Compatibility with devices and browsers is a major focus, often leading to mobile first designs.</p>
+              </li>
+              <li>
+                <h4><span class="material-icons">travel_explore</span><span>Optimization</span></h4>
+                <p>Does the site have good search engine optimization? Aside from including good content, load times & semantic code are just a couple considerations when optimizing a site.</p>
               </li>
             </ul>
-          </article>
-        </section>
+          </div>
+        </div>
+        <!-- Previous Works -->
+        <div class="content-block red">
+          <img src="images/glyph.png" alt="" style="width:3em">
+          <header id="previous-works-section">
+            02 Previous works
+          </header>
+        </div>
+        <div class="content-block previous-works">
+        <div class="employers">
+          <ul>
+            <li class="logo">
+              <a href="https://www.hawaiidiscount.com/"><img src="images/LogoSingle.png" alt=""></a>
+            </li>
+            <li>
+              <h3>Hawaii Discount LLC</h3>
+              <b>2016 - 2020</b>
+              <p>From 2016, to 2020 I worked with Hawaii Discount. During my time with them. I designed and coded microsites. Each site was required to look unique even if some design requirements were to be similar to other sites. Below are some examples of some of the sites I made:</p>
+            </li>
+          </ul>
+        </div>
+        <div class="projects">
+          <ul>
+            <li>
+              <a href="https://www.grandcircleislandtouroahu.com/"><img src="images/grandcircleislandtour.png" alt=""></a>
+              <a href="https://www.grandcircleislandtouroahu.com/"><h3>grand circle <br> island tour oahu</h3> - <span>2016</span></a>
+              <p>Goal was to advertise a bus tour around the island of oahu. Inspriation was rest-stop maps found along the road showcasing local sights and events. Webstite written in HTML, CSS, and Javascript</p>
+            </li>
+            <li>
+              <a href="https://www.helicoptertoursdiscount.com/"><img src="images/hawaiihelicoptertour.png" alt=""></a>
+              <a href="https://www.helicoptertoursdiscount.com/"><h3>Hawaii Helicopter Tours</h3> - <span>2020</span></a>
+              <p>Similar to the bus tour site, this site was focused on helicopter tours on Hawaii. The paralax effect was created by cutting out a cockpit of a helicopter and overlaying it with an island background image. The intention was to make the site striking yet minimalist. Webstite written in HTML, CSS, and Javascript</p>
+            </li>
+          </ul>
+        </div>
+        <div class="employers">
+          <ul>
+            <li class="logo">
+              <a href="https://digitalrocket.church/"> <img src="images/digitalrocketlogo.jpg" alt=""> </a>
+            </li>
+            <li>
+              <h3>Digital Rocket</h3>
+              <b>2021 - 2022</b>
+              <p>From 2021 to 2022 I was employed by Digital Rocket as a web designer. Unlike my previous position, web design was just one of my many tasks including monitoring ads and SEO for sites as well as miscelanious tasks to assist client satisfaciton. Though no longer full time, I still assist the company from time to time. Below are some examples of some of the sites I made:</p>
+            </li>
+          </ul>
+        </div>
+        <div class="projects">
+          <ul>
+            <li>
+              <a href="https://harconfl.com/"><img src="images/harconfl.png" alt=""></a>
+              <br>
+              <a href="https://harconfl.com/"><h3>Hardscape Concepts</h3> - <span>2022</span></a>
+              <p>The client requested a website advertising their hardscaping buisness and contact information. The design is very condensed to only what information is needed. Much of the focus of this site was lead generation and integration with Google ads. Website was built with Wordpress - Elementor</p>
+            </li>
+            <li>
+              <a href="https://arepashouse.com/"><img src="images/arepas.png" alt=""></a>
+              <br>
+              <a href="https://arepashouse.com/"><h3>Arepas House</h3> - <span>2022</span></a>
+              <p>Arepas House is a restaurant serving Venezuelan food, and the client was very forward with their vision, including the graphics and colors for the site. Much of the site employs multilevel paralax scrolling, which was tricky to get just right. Webstie was build with Wordpress - Elementor</p>
+            </li>
+          </ul>
+        </div>
+       </div>
+        <!-- ================================= -->
+        <!-- Resume -->
+        <div class="content-block red">
+          <img src="images/glyph.png" alt="" style="width:3em">
+          <header id="resume-section">
+            03 Resume
+          </header>
+        </div>
+        <div class="content-block resume">
+          <iframe src="images/patrickcolemanresume.pdf" width="" height=""></iframe>
+        </div>
+        <!-- contact -->
+        <div class="content-block red">
+          <img src="images/glyph.png" alt="" style="width:3em">
+          <header id="contact-section">
+            04 Contact
+          </header>
+        </div>
+        <div class="content-block contact">
+          <ul>
+            <li>
+              <span class="material-icons">email</span>
+              <a href="mailto:colemanrpatrick@gmail.com"><h4>colemanrpatrick@gmail.com</h4></a>
+            </li>
+            <li>
+              <span class="material-icons">phone</span>
+              <a href="tel:8439015775"><h4>(843) 901-5775</h4></a>
+            </li>
+            <li>
+              <span class="material-icons">share</span>
+              <a href="https://www.linkedin.com/in/patrick-coleman-678794120/"><h4>LinkedIn</h4></a>
+            </li>
+          </ul>
+        </div>
+        <!-- ============ -->
       </div>
     </div>
-    <script src="toggle.js"></script>
-    <script src="main.js"></script>
+    <script type="text/javascript" src="toggle-min.js"></script>
+    <!-- video handling -->
+    <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function() {
+      console.log("loaded?");
+      $videoDiv = document.getElementById("video-1");
+      $video = document.createElement("video");
+      $video.src = "video/23730.mp4";
+      $video.muted = true;
+      $video.autoplay = true;
+      $video.loop = true;
+      $videoDiv.parentElement.appendChild($video);
+    });
+    function scrollIn($elem){
+      console.log($elem);
+      $('html,body').animate({scrollTop: $($elem).offset().top}, 1000);
+    };
+    </script>
   </body>
 </html>
