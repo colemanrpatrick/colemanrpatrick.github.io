@@ -2,7 +2,6 @@
     font-size: 2em;
     text-transform: uppercase;
 }
-/*=======*/
 *, *:before, *:after {
   margin: 0;
   padding: 0;
@@ -356,7 +355,8 @@ p{
 }
 .projects ul{
   width: 100%;
-  max-width: 900px;
+  max-width: 1000px;
+  display: block;
   margin: 0 auto;
 }
 .projects li {
@@ -364,12 +364,13 @@ p{
     text-align: center;
     vertical-align: top;
     color: #E4FDE1;
-    width: 48%;
+    width: 49%;
     padding: 2em;
 }
 .projects img {
     box-shadow: 0em 0em 1em white;
     transition: 0.3s;
+    max-width: 20em;
 }
 .projects img:hover{
   transform: scale(1.1);
