@@ -356,15 +356,14 @@ p{
 .projects ul{
   width: 100%;
   max-width: 900px;
-  display: table;
   margin: 0 auto;
 }
 .projects li {
-    display: table-cell;
+    display: inline-block;
     text-align: center;
     vertical-align: top;
     color: #E4FDE1;
-    width: 50%;
+    width: 48%;
     padding: 2em;
 }
 .projects img {
